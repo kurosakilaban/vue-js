@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+    content="width=device-width, initial-scale=1.0">
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <title>Vue js</title>
+    <style>
+      .app {
+        max-width: 800px; /* adjust the width to your liking */
+        margin: 40px auto; /* add some margin to create space around the content */
+        text-align: center; /* center the content horizontally */
+      }
+      .profile {
+        display: inline-block; /* make the profile container an inline-block element */
+        text-align: center; /* left-align the text inside the profile container */
+      }
+      .profile img {
+        width: 250px; /* set the width of the image to 150 pixels */
+        height: 200px; /* set the height of the image to 150 pixels */
+        border-radius: 0%; /* add a circular border to the image */
+        margin-bottom: 20px; /* add some margin below the image */
+      }
+    </style>
+</head>
+<body>
+    <!-- index.html -->
+<div class="app">
+    <div class="profile">
+      <img v-bind:src="user.profilePicture" alt="User Profile Picture" />
+      <h1>{{ user.name }}</h1>
+      <p>{{ user.bio }}</p>
+      <p>{{ user.location }}</p>
+      <h3>Skills:</h3>
+      <ul>
+        <li v-for="skill in user.skills">{{ skill }}</li>
+      </ul>
+      <h4>Login: {{ user.login }}</h4>
+    </div>
+    <!---end of vue app-->
+  </div>
+
+        <script src="./main.js"></script>
+</body>
+</html>
