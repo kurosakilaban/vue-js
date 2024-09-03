@@ -37,6 +37,8 @@
         <li v-for="skill in user.skills">{{ skill }}</li>
       </ul>
       <h4>Login: {{ user.login }}</h4>
+      <button v-on:click="showAge">Show Age</button>
+      <p v-if="showAgeFlag">Age: {{ age }}</p>
     </div>
     <!---end of vue app-->
   </div>
